@@ -21,6 +21,8 @@
 		76CDEAB4181B2C6F00B2E836 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76CDEA96181B2C6E00B2E836 /* UIKit.framework */; };
 		76CDEABC181B2C6F00B2E836 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76CDEABA181B2C6F00B2E836 /* InfoPlist.strings */; };
 		76CDEABE181B2C6F00B2E836 /* Prova01Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76CDEABD181B2C6F00B2E836 /* Prova01Tests.m */; };
+		76E3E873181C3EB400531F75 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E3E872181C3EB300531F75 /* MapKit.framework */; };
+		76E3E876181C427B00531F75 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76E3E875181C427B00531F75 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		76CDEAB9181B2C6F00B2E836 /* Prova01Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Prova01Tests-Info.plist"; sourceTree = "<group>"; };
 		76CDEABB181B2C6F00B2E836 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76CDEABD181B2C6F00B2E836 /* Prova01Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Prova01Tests.m; sourceTree = "<group>"; };
+		76E3E872181C3EB300531F75 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		76E3E874181C427A00531F75 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		76E3E875181C427B00531F75 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76E3E873181C3EB400531F75 /* MapKit.framework in Frameworks */,
 				76CDEA95181B2C6E00B2E836 /* CoreGraphics.framework in Frameworks */,
 				76CDEA97181B2C6E00B2E836 /* UIKit.framework in Frameworks */,
 				76CDEA93181B2C6E00B2E836 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		76CDEA91181B2C6E00B2E836 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				76E3E872181C3EB300531F75 /* MapKit.framework */,
 				76CDEA92181B2C6E00B2E836 /* Foundation.framework */,
 				76CDEA94181B2C6E00B2E836 /* CoreGraphics.framework */,
 				76CDEA96181B2C6E00B2E836 /* UIKit.framework */,
@@ -119,6 +126,8 @@
 				76CDEAA8181B2C6E00B2E836 /* ViewController.m */,
 				76CDEAAA181B2C6E00B2E836 /* Images.xcassets */,
 				76CDEA99181B2C6E00B2E836 /* Supporting Files */,
+				76E3E874181C427A00531F75 /* MapViewController.h */,
+				76E3E875181C427B00531F75 /* MapViewController.m */,
 			);
 			path = Prova01;
 			sourceTree = "<group>";
@@ -199,6 +208,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Bianca Borbonese";
 				TargetAttributes = {
+					76CDEA8E181B2C6E00B2E836 = {
+						DevelopmentTeam = 46YW755342;
+					};
 					76CDEAAF181B2C6F00B2E836 = {
 						TestTargetID = 76CDEA8E181B2C6E00B2E836;
 					};
@@ -252,6 +264,7 @@
 				76CDEAA9181B2C6E00B2E836 /* ViewController.m in Sources */,
 				76CDEAA3181B2C6E00B2E836 /* AppDelegate.m in Sources */,
 				76CDEA9F181B2C6E00B2E836 /* main.m in Sources */,
+				76E3E876181C427B00531F75 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,10 +391,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Prova01/Prova01-Prefix.pch";
 				INFOPLIST_FILE = "Prova01/Prova01-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -391,10 +407,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Prova01/Prova01-Prefix.pch";
 				INFOPLIST_FILE = "Prova01/Prova01-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -460,6 +479,7 @@
 				76CDEAC3181B2C6F00B2E836 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		76CDEAC4181B2C6F00B2E836 /* Build configuration list for PBXNativeTarget "Prova01Tests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +488,7 @@
 				76CDEAC6181B2C6F00B2E836 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
